@@ -1,0 +1,319 @@
+@clr-main: #CFCCD6;
+@clr-aux: #472836;
+@clr-info: #7B6965;
+@clr-info-aux: #B69A94;
+@clr-text-main: black;
+@clr-text-aux: white;
+
+
+@font-face {
+    font-family: FretQwikC;
+    src: url("fonts/FretQwikC.ttf");
+}
+
+@font-face {
+    font-family: Bitter;
+    src: url("fonts/Bitter-Regular.ttf");
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    background-color: @clr-main;
+    font-family: Bitter;
+}
+
+// .body-main { height: 2100px; }
+
+.fret {
+    font-family: FretQwikC;
+    padding-top: 26px;
+    padding-left: 10px;
+}
+
+.logo {
+    padding-left: 10%;
+}
+
+
+.information-main {
+    display: flex;
+    flex-direction: row;
+    background-color: @clr-info;
+    height: 100px;
+
+    .fret {
+        padding-top: 10px;
+    }
+
+    img {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .logodiv {
+        width: 45%;
+    }
+
+    .menu {
+        width: 55%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-right: 5%;
+
+        .contacts {
+            padding-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            line-height: 0px;
+            p {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.information-aux {
+    display: flex;
+    flex-direction: row;
+    background-color: @clr-info-aux;
+    height: 100px;
+
+    .fret {
+        padding-top: 10px;
+    }
+
+    img {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .logodiv {
+        width: 45%;
+    }
+
+    .menu {
+        width: 55%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-right: 5%;
+
+        .contacts {
+            padding-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            line-height: 0px;
+            p {
+                text-align: right;
+            }
+        }
+    }
+}
+
+
+.square {
+    display: flex;
+    margin: 100px 5%;
+
+    h2 {
+        font-weight: normal;
+    }
+
+    img {
+        height: 250px;
+    }
+
+    .left {
+        margin-right: 5%;
+    }
+
+    .right {
+        margin-left: 5%;
+    }
+}
+
+
+.round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .h2 {
+        text-align: center;
+        font-weight: normal;
+        color: @clr-text-aux;
+        background-color: @clr-aux;
+        margin-bottom: 0;
+        padding-top: 50px;
+    }
+
+    .rounds {
+        color: @clr-text-aux;
+        background-color: @clr-aux;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 40px;
+
+        div {
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+            width: 150px;
+            margin: 30px 0;
+        }
+
+        img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        p {
+            display: block;
+            font-size: small;
+        }
+    }
+}
+
+a { color: @clr-text-main; }
+a:hover { text-decoration: none; color: @clr-text-main; }
+a:focus { text-decoration: none; color: @clr-text-main; }
+a:active { text-decoration: none; color: @clr-text-main; }
+a:visited { text-decoration: none; color: @clr-text-main; }
+
+
+@media(max-width: 900px) {
+    .information-main .menu {
+        .contacts { display: none; }
+    }
+    
+    .information-aux .menu {
+        .contacts { display: none; }
+    }
+        
+}
+
+
+@media (max-width: 576px) {
+    .information-main {
+        flex-direction: column;
+        width: 100%;
+        .logodiv {
+            height: 100px;
+            width: 100%;
+        }
+        .menu {
+            background-color: @clr-info-aux;
+            height: 100px;
+            width: 100%;
+            justify-content: space-around;
+            padding-bottom: 15px;
+
+            .contacts { display: none; }
+        }
+    }
+
+    .information-aux {
+        flex-direction: column;
+        width: 100%;
+        .logodiv {
+            height: 100px;
+            width: 100%;
+        }
+        .menu {
+            display: none;
+            .contacts { display: none; }
+        }
+    }
+
+    .square {
+        flex-direction: column;
+        justify-content: center;
+
+        .left { margin-right: 0; }
+
+        .right { margin-left: 0; }
+    }
+
+    .rounds {
+        flex-wrap: wrap;
+    }
+
+    .book-group {
+        margin-top: 85px;
+    }
+
+}
+
+
+
+.grid-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    a { color: @clr-text-aux; }
+    a:hover { text-decoration: none; color: @clr-text-aux; }
+    a:focus { text-decoration: none; color: @clr-text-aux; }
+    a:active { text-decoration: none; color: @clr-text-aux; }
+    a:visited { text-decoration: none; color: @clr-text-aux; }
+
+    .h2 {
+        text-align: center;
+        font-weight: normal;
+        font-size: xx-large;
+        color: @clr-text-aux;
+        background-color: @clr-aux;
+        margin-bottom: 0;
+        padding-top: 40px;
+        margin-top: 0;
+    }
+
+    .grid-elements {
+        color: @clr-text-aux;
+        background-color: @clr-aux;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        div {
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+            width: 150px;
+            margin: 30px 2%;
+        }
+
+        img {
+            height: 150px;
+            width: 150px;
+        }
+
+        p {
+            display: block;
+            font-size: small;
+        }
+    }
+}
+
+.book {
+    flex-direction: column;
+    margin: 50px 5%;
+    .img {
+        flex-direction: row;
+        
+        img { height: 600px; margin-right: 40px; }
+        p { display: inline-block; vertical-align: top; }
+        .seller { vertical-align: bottom; }
+    }
+}
